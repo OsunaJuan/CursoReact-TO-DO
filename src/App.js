@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {TodoCounter} from "./componentes/TodoCounter"
+import {TodoSearch} from './componentes/TodoSearch'
+import {TodoList} from './componentes/TodoList'
+import {TodoItem} from './componentes/TodoItem'
+import {CreateTodoButtom} from './componentes/CreateTodoButtom'
+
+let Todos = [
+  {text: "Llamar Mama", completed: true},
+  {text:"Sacar Perro", completed: true}
+]
 
 function App() {
+
+  const [searchedValue,setSearchedValue] = React.useState("");
+
+  let searchedTodos = Todos.filter(todo => 
+    todo.text.toLowerCase().includes(searchedValue.toLowerCase())
+  );
+  
+  let completedTodos = searchedTodos.filter(todo => todo.completed).length;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="TodoMain">
+      <TodoCounter
+      completedTodo = {completedTodos}
+      todoCount = {searchedTodos.length}
+      />
+      <TodoSearch
+       searchedValue = {searchedValue}
+       setSearchedValue = {setSearchedValue}
+      />
+
+      <TodoList>
+        {searchedTodos.map((todo,index) => (
+          <TodoItem TODO={todo} key={index}/>
+        ))}
+      </TodoList>
+      <CreateTodoButtom/>
+    </section>
+      
+    
   );
 }
 

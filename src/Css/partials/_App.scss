@@ -1,0 +1,12 @@
+.TodoMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    background-color: $blue;
+    color: $white;
+}

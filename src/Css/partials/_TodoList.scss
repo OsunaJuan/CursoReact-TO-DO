@@ -1,0 +1,32 @@
+.TodoList-container{
+    width: 60%;
+    ul{
+        list-style: none;
+        li{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin: 1.5rem auto 1.5rem auto;
+            font-size: 2rem;
+
+            .TodoCompletedCheck{
+                color: green;
+            }
+
+            .TodoCompletedText{
+                text-decoration: line-through;
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                font-size: 2rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+        }    
+    }
+}
