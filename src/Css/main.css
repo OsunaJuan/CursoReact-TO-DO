@@ -63,6 +63,9 @@
 .TodoList-container ul li .TodoCompletedCheck {
   color: green;
 }
+.TodoList-container ul li .TodoCompletedCheck:hover {
+  color: grey;
+}
 .TodoList-container ul li .TodoCompletedText {
   text-decoration: line-through;
 }
@@ -73,6 +76,9 @@
 }
 .TodoList-container ul li button:hover {
   cursor: pointer;
+}
+.TodoList-container ul li .deleteTodo:hover {
+  color: red;
 }
 
 .CreateTodoButtom {

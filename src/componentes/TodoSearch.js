@@ -1,12 +1,13 @@
-import react from "react";
+import React from "react";
+import { TodoContext } from "./TodoContext";
 import searchIcon from '../imgs/SearchIcon.png'
 
-function TodoSearch({searchedValue,setSearchedValue}){
-
+function TodoSearch(){
+    const {setSearchedValue} = React.useContext(TodoContext)
+    
     function inputOnChnage(event){
         setSearchedValue(event.target.value)
     }
-
 
     return(
         <span className="SearchInput">

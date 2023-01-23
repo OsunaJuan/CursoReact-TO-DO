@@ -12,6 +12,9 @@
 
             .TodoCompletedCheck{
                 color: green;
+                &:hover{
+                    color: grey;
+                }
             }
 
             .TodoCompletedText{
@@ -25,6 +28,10 @@
                 &:hover{
                     cursor: pointer;
                 }
+            }
+
+            .deleteTodo:hover{
+                color: red;
             }
 
         }    
