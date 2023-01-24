@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CursoReact-TO-DO.github.io/static/css/main.a4f0e929.css",
+    "main.js": "/CursoReact-TO-DO.github.io/static/js/main.8eefffab.js",
+    "index.html": "/CursoReact-TO-DO.github.io/index.html",
+    "main.a4f0e929.css.map": "/CursoReact-TO-DO.github.io/static/css/main.a4f0e929.css.map",
+    "main.8eefffab.js.map": "/CursoReact-TO-DO.github.io/static/js/main.8eefffab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4f0e929.css",
+    "static/js/main.8eefffab.js"
+  ]
+}
