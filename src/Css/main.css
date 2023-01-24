@@ -93,6 +93,62 @@
   cursor: pointer;
 }
 
+#modal {
+  width: 100%;
+  height: 100%;
+}
+
+.modalBackGround {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.modalBackGround .ModalCreateTodo {
+  background-color: #F1F1E5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 40%;
+  border: 0.3rem solid black;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.6);
+  border-radius: 5%;
+  z-index: 2;
+}
+.modalBackGround .ModalCreateTodo textarea {
+  width: 80%;
+  height: 30%;
+  resize: none;
+  margin-block: 3rem;
+}
+.modalBackGround .ModalCreateTodo .modalButtons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.modalBackGround .ModalCreateTodo .modalButtons button {
+  width: 40%;
+  height: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  background-color: #F1F1E5;
+  font-family: "Roboto Mono", monospace;
+}
+.modalBackGround .ModalCreateTodo .modalButtons button:hover {
+  cursor: pointer;
+}
+
 * {
   padding: 0;
   margin: 0;

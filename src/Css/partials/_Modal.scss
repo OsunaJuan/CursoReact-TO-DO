@@ -1,0 +1,60 @@
+#modal{
+    width: 100%;
+    height: 100%;
+}
+
+.modalBackGround{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .4);
+    z-index: 1;    
+
+    .ModalCreateTodo{
+        background-color: $white;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        width: 40%;
+        height: 40%;
+        border: .3rem solid black;
+        box-shadow: 0 0 .5rem .2rem  rgba($color: #000000, $alpha: .6);
+        border-radius: 5%;       
+        z-index: 2;
+        
+        textarea{
+            width: 80%;
+            height: 30%;
+            resize: none;
+            margin-block: 3rem;
+        }
+
+        .modalButtons{
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            button{
+                width: 40%;
+                height: 3rem;
+                border: 1px solid rgba($color: #000000, $alpha: 0.3);
+                box-shadow: 0 0 .1rem .1rem  rgba($color: #000000, $alpha: .3);
+                border-radius: .5rem;
+                background-color: $white;
+                font-family: $roboto;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

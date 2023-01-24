@@ -4,6 +4,8 @@ import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 import { CreateTodoButtom } from "./CreateTodoButtom";
+import { Modal } from './Modal';
+import { ModalCreateTodo } from './ModalCreateTodo';
 import { TodoContext } from './TodoContext';
 
 function TodoAPPUI() {
@@ -14,6 +16,7 @@ function TodoAPPUI() {
     ToggleCompletedTodo,
     EliminateTodo,
     searchedTodos,
+    modalIsOpen
    } = React.useContext(TodoContext)
 
   return (
@@ -33,6 +36,12 @@ function TodoAPPUI() {
           ))}
         </TodoList>
         <CreateTodoButtom />
+        
+        {!!modalIsOpen && (
+          <Modal>
+            <ModalCreateTodo/>
+          </Modal>
+        )}
       </section>
   )
 }

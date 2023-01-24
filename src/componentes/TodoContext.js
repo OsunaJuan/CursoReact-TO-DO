@@ -8,7 +8,7 @@ function TodoProvider(props){
 
     //Declaracióon del estado y funciones que manejan el completar de un TODO y su eliminación. 
 
-    const {item:ArrayTodos, 
+    const {item:ArrayTodos,
     saveItemsToLocalStorage:saveTODOSToLocalStorage,
     loading, 
     error} = useLocalStorage("TODOS_V1",[
@@ -45,11 +45,15 @@ function TodoProvider(props){
   );
     
   let completedTodos = searchedTodos.filter(todo => todo.completed).length;
-  console.log(completedTodos, "CONTEXTRT")
+
+  //Declaración del estado usado en el Modal
+
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
     return(
 
         <TodoContext.Provider value={{ArrayTodos,
+            saveTODOSToLocalStorage,
             loading,
             error,
             ToggleCompletedTodo,
@@ -57,7 +61,9 @@ function TodoProvider(props){
             searchedValue,
             setSearchedValue,
             searchedTodos,
-            completedTodos
+            completedTodos,
+            modalIsOpen,
+            setModalIsOpen
         }}>
 
         {props.children}
